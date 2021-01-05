@@ -15,7 +15,7 @@ const signUpUser = async (req, res)=>{
        let user = await newUser.save();
        sendResponse(200, "Successful", [user], req, res);
     }catch(err){
-        sendError(new AppError(401, "Unsuccessful", "Internal Error"), req,res);
+        return sendError(new AppError(401, "Unsuccessful", "Internal Error"), req,res);
     }
    
 }

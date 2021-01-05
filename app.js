@@ -20,7 +20,11 @@ mongoose.connect(process.env.DATABASE_URL, { useUnifiedTopology: true , useNewUr
     }
     console.log("Successfully connected to the database");       
 })
-
+app.get("/", (req,res)=>{
+    res.json({
+        message: "There is nothing on this page",
+    })
+})
 app.use("/users", userRouter);
 app.listen(process.env.PORT, ()=>{
     console.log("Listening to the port")
