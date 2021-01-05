@@ -58,14 +58,21 @@ const isUserNameUnique = async (req,res, next) =>{
 const isUserRegistered = async (req, res, next)=>{
     try{
         let user = await User.findOne({username: req.body.username});
+        if(!user){
+            return sendError(
+                new AppError(401, "Unsuccesssul", "User not registered"),
+                req,
+                res,
+              );
+        }
         req.currentUser = user;
         next();
     }catch(err){
-        return sendError(
-            new AppError(401, "Unsuccesssul", "User not registered"),
-            req,
-            res,
-          );
+       return sendError(
+           new AppError(401, "Unsuccessful", "Internal Error"),
+           req,
+           res,
+       )
     }
 }
 
