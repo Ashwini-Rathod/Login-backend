@@ -1,0 +1,27 @@
+[
+  {
+    "taskId": "01",
+    "status": "Pending",
+    "task": "Basics of HTML and CSS"
+  },
+  {
+    "taskId": "02",
+    "status": "Pending",
+    "task": "Javascript Functions, Arrays and Objects"
+  },
+  {
+    "taskId": "03",
+    "status": "Pending",
+    "task": "Node JS"
+  },
+  {
+    "taskId": "04",
+    "status": "Pending",
+    "task": "Fundamentals of React"
+  },
+  {
+    "taskId": "05",
+    "status": "Pending",
+    "task": "React Routing"
+  }
+]
