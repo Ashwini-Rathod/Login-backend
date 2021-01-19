@@ -60,7 +60,7 @@ const isUserRegistered = async (req, res, next)=>{
         let user = await User.findOne({username: req.body.username});
         if(!user){
             return sendError(
-                new AppError(401, "Unsuccesssul", "User not registered"),
+                new AppError(401, "Unsuccessful", "User not registered"),
                 req,
                 res,
               );
